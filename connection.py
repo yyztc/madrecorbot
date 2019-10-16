@@ -1,13 +1,14 @@
 import psycopg2
 import sys
 from rmConected import *
+import config
 
 conn = psycopg2.connect(
-    host="ec2-54-243-238-226.compute-1.amazonaws.com",
-    database="d389741edgtj5m", 
-    user="nglaxfwhexoild",
-    password="022b2a1d78e0792c6b9037a6cf159e889ae357f1152a8e0f4c7b8ee36cbb88da",
-    port="5432")
+    host="{}",
+    database="{}", 
+    user="{}",
+    password="{}",
+    port="{}").format(config.herokuHost, config.herokuDB, config.herokuUser, config.herokuPss, config.herokuPort)
 
 cur = conn.cursor()
 
