@@ -1,8 +1,8 @@
-#from pyad import *
+from pyad import *
 import datetime
 import ItopAutomacao
 import connection
-#from rmConnection import *
+from rmConnection import *
 
 config = {
     'AgenciaTransfusional': {
@@ -201,13 +201,13 @@ def createUser():
         @user - Usuário para fazer login
     '''
     print(name, user, sector)
-    #ou = pyad.adcontainer.ADContainer.from_dn(config[sector]['OU'])
-    #pyad.aduser.ADUser.create(name, ou, password="Madre19@@") #Criar usuário no Active Directory
-    #pyad.from_cn(name).update_attribute('sAMAccountName', user)
-    #mail = user+'@madre.com.br'
-    #pyad.from_cn(name).update_attribute('userPrincipalName', mail)
-    #setMemberInGroup(name, sector) #Setar usuários no grupo
-    #ItopAutomacao.createItopUser(name, user, config[sector]['ITOP']) #Criar usuário no ITOP
+    ou = pyad.adcontainer.ADContainer.from_dn(config[sector]['OU'])
+    pyad.aduser.ADUser.create(name, ou, password="Madre19@@") #Criar usuário no Active Directory
+    pyad.from_cn(name).update_attribute('sAMAccountName', user)
+    mail = user+'@madre.com.br'
+    pyad.from_cn(name).update_attribute('userPrincipalName', mail)
+    setMemberInGroup(name, sector) #Setar usuários no grupo
+    ItopAutomacao.createItopUser(name, user, config[sector]['ITOP']) #Criar usuário no ITOP
     #log.write(f'Usuário {name} criado ás '+datetime.datetime.strftime(tt, '%d/%m/%Y %H:%M:%S')+'\n')
 
 def checkIfUserExists(name):
