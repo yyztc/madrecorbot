@@ -22,7 +22,7 @@
  
 # A fazer
  * Criar match dos setores - Ex: TI = tecnologia = ti
-                                 CCIH = ccih = educacao
+ *                               CCIH = ccih = educacao
  
  * Criar usuários no RM
  * Criar e-mail no outlook
