@@ -11,7 +11,7 @@
 # Necessário 02 máquinas.
   * Caso queira deixar em apenas 01 máquina apenas seguir os passos abaixo, porém pode acabar consumindo muito processo.
 
-- Executar rmConected em uma máquina com o Active Directory instalado (https://www.technipages.com/windows-install-active-directory-users-and-computers) ou executar no servidor.
+- Executar ADServer em uma máquina com o Active Directory instalado (https://www.technipages.com/windows-install-active-directory-users-and-computers) ou executar no servidor.
 - Executar connection na máquina local para inserir usuários no banco de dados.
 
 # Exemplo de dado a ser passado.
